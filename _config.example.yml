@@ -1,0 +1,35 @@
+head:
+  title_separate: "|"
+  keywords: "iris"
+  # https://realfavicongenerator.net/
+  favicon: 
+    small: /favicon.ico # including 16*16, 32x32, 48*48 PNGs, ICO format
+    large: /favicon-192x192.png # 196x196, PNG format
+    ios: /apple-touch-icon.png # ideally 180x180, at least 120x120
+  rss: /atom.xml
+
+header:
+  nav:
+    Archive: "/archives"
+    About: "/about"
+
+hero:
+  color: 
+  image: 
+  
+
+post:
+  excerpt: 300
+
+footer:
+  copyright: 2015
+
+blog:
+  avatar: avatar.png
+  slogan: 
+
+analytics:
+  google:
+
+comment:
+  disqus:
