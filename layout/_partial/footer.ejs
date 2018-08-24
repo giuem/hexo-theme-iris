@@ -2,7 +2,7 @@
   <div class="footer-wrapper">
     <p class="copyright">
       &copy; 
-      <% theme.footer.copyright? `${theme.footer.copyright} -` : '' %>
+      <%- theme.footer.copyright? `${theme.footer.copyright} -` : '' %>
       <%- date(new Date(), 'YYYY') %>
       <%= config.author %>
     </p>
