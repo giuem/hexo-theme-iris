@@ -1,0 +1,29 @@
+post:
+  read_more: "»"
+
+nav:
+  prev_page: "上一页"
+  next_page: "下一页"
+
+archive:
+  title: "归档"
+  counter:
+    zero: "没有文章。"
+    one: "目前共有 1 篇文章。"
+    other: "目前共有 %d 文章。"
+
+category:
+  title: "分类"
+  counter:
+    zero: "该分类下没有文章。"
+    one: "该分类下有 1 篇文章。"
+    other: "该分类下共有 %d 文章。"
+
+tag:
+  title: "标签"
+  counter:
+    zero: "该标签下没有文章。"
+    one: "该标签下有 1 篇文章。"
+    other: "该标签下共有 %d 文章。"
+
+

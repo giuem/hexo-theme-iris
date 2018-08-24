@@ -1,0 +1,16 @@
+<% if (page.total > 1) { %>
+  <nav class="pagination">
+    <% if (page.prev) { %>
+      <a class="prev" href="<%- url_for(page.prev_link) %>">
+        <i class="far fa-arrow-alt-circle-left hvr-icon" aria-hidden></i>
+        <span><%= __("nav.prev_page") %></span>
+      </a>
+    <% } %>
+    <% if (page.next) { %>
+      <a class="next" href="<%- url_for(page.next_link) %>">
+        <span><%= __("nav.next_page") %></span>
+        <i class="far fa-arrow-alt-circle-right hvr-icon" aria-hidden></i>
+      </a>
+    <% } %>
+  </nav>
+<% } %>

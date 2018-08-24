@@ -1,0 +1,29 @@
+.archive {
+  padding: 3.5rem 0;
+
+  &-header {
+    border-bottom: 1px dashed $color-border;
+  }
+
+  &-title {
+    font-weight: normal;
+    // padding-bottom: 1rem;
+  }
+
+  &-content {
+    margin: 1rem 0;
+  }
+
+  .counter {
+    font-weight: bold;
+
+    & + .year {
+      margin-top: 0;
+    }
+  }
+
+  .year {
+    font-weight: normal;
+    margin: 2em 0 1rem;
+  }
+}

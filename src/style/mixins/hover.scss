@@ -1,0 +1,9 @@
+@import "~hover.css/scss/options";
+@import "~hover.css/scss/mixins";
+@import "~hover.css/scss/hacks";
+
+$activeColor: $color-blue;
+
+@import "~hover.css/scss/effects/icons/icon-back";
+@import "~hover.css/scss/effects/icons/icon-forward";
+@import "~hover.css/scss/effects/border-transitions/underline-from-center";

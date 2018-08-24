@@ -1,0 +1,185 @@
+// typography
+
+html {
+  font-size: $font-size-default;
+  line-height: $line-height-default;
+  @media #{$desktop} {
+    font-size: $font-size-desktop;
+    line-height: $line-height-desktop;
+  }
+}
+
+body {
+  font-family: $font-family-sans;
+  font-size: 1rem;
+  color: $color-text;
+  // text-rendering: geometricPrecision;
+
+  @media #{$mobile} {
+    hyphens: auto;
+    word-wrap: break-word;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: $font-family-serif;
+  font-weight: bold;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+
+  margin: 0 0 0.75em;
+  * + & {
+    margin-top: 1.25em;
+  }
+}
+
+h1 {
+  font-size: $font-size-1;
+}
+
+h2 {
+  font-size: $font-size-2;
+}
+
+h3 {
+  font-size: $font-size-3;
+}
+
+h4 {
+  font-size: $font-size-4;
+}
+
+h5 {
+  font-size: $font-size-5;
+}
+
+h6 {
+  font-size: $font-size-6;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid $color-border;
+}
+
+p,
+hr,
+ul,
+ol,
+dl,
+blockquote,
+pre {
+  margin: 0 0 1em;
+  * + & {
+    margin-top: 1em;
+  }
+}
+
+ins,
+a {
+  text-decoration: none;
+}
+
+a {
+  color: $color-link;
+  -webkit-text-decoration-skip: objects;
+  transition: color 200ms ease-out;
+  &:hover {
+    color: $color-link-hover;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  border: 0;
+}
+
+blockquote {
+  font-style: italic;
+  padding: 0 1.5em;
+  border-left: $color-blue solid 0.2em;
+
+  p {
+    margin: 0;
+  }
+
+  cite:before {
+    content: "—";
+    padding: 0 0.5em;
+  }
+}
+
+ul,
+ol {
+  padding-left: 2em;
+}
+
+dt,
+dd,
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin: 0;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+
+  tr {
+    border-top: 1px solid $color-border;
+    // &:nth-child(2n) {
+    //   background: #f9f9f9;
+    // }
+  }
+
+  th,
+  td {
+    text-align: left;
+    border: 1px solid $color-border;
+    padding: 0.3em 0.6em;
+  }
+}
+
+code {
+  color: $color-blue;
+  font-size: 1em;
+  letter-spacing: -0.01em;
+  &::before,
+  &::after {
+    content: "`";
+  }
+}
+
+kbd {
+  background: #fafafc;
+  border: 1px solid #eee;
+  font-size: $font-size-7;
+  border-radius: 3px;
+  padding: 0.2em 0.4em;
+  box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+}
+
+dt {
+  font-weight: bold;
+  font-style: italic;
+}
+
+dd {
+  margin-left: 3em;
+}

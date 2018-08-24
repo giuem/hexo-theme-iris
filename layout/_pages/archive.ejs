@@ -1,0 +1,49 @@
+<%
+var title = "";
+var type = "";
+var counter = 0;
+if (is_archive()) {
+  type = "archive";
+  title = __(type + ".title");
+  couter = site.posts.length;
+} else if (is_category()) {
+  type = "category";
+  title = __(type + ".title") + ': ' + page.category;
+  couter = _.filter(site.posts.data, post => {
+    return post.categories.data.filter(
+      doc => doc.name === page.category
+    ).length > 0;
+  }).length
+} else if (is_tag()) {
+  type = "tag";
+  title = __(type + ".title") + ': ' + page.tag;
+  couter = _.filter(site.posts.data, post => {
+    return post.tags.data.filter(
+      doc => doc.name === page.tag
+    ).length > 0;
+  }).length
+}
+
+var posts = _.groupBy(page.posts.data, post => post.date.year());
+%>
+
+<article class="archive">
+  <header class="archive-header">
+    <h1 class="archive-title"><%- title %></h1>
+  </header>
+  <section class="archive-content">
+    <p class="counter"><%= _p(type + ".counter", couter) %></p>
+    <% _.forInRight(posts, function(posts, year) { %>
+      <h2 class="year"><%= year %></h2>
+      <ul class="archive-group">
+        <% posts.forEach(function(post) { %>
+          <li>
+            <a href="<%= url_for(post.path) %>"><%= post.title %></a>
+          </li>
+        <% }) %>
+      </ul>
+    <% }) %>
+  </section>
+</article>
+
+<%- partial("_partial/pagination") %>

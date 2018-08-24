@@ -1,0 +1,24 @@
+<% if (theme.comment.disqus) { %>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+  var disqus_config = function () {
+    this.page.url = '<%- page.permalink %>';
+    this.page.identifier = '<%- page.slug %>';
+    this.page.title = '<%- page.title %>';
+  };
+  if (!document.getElementById('disqus-embed')) {
+    var d = document, s = d.createElement('script');
+    s.type = 'text/javascript';
+    s.id = 'disqus-embed';
+    s.async = true;
+    s.src = '//<%=theme.disqus%>.disqus.com/embed.js';
+    (d.head || d.body).appendChild(s);
+  }
+  if(typeof DISQUS == 'object'){
+    DISQUS.reset({
+        reload: true,
+        config: disqus_config
+    })
+  }
+</script>
+<% } %>

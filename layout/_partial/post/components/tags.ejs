@@ -1,0 +1,10 @@
+<% if (post.tags && post.tags.length > 0) { %>
+<section class="tags">
+  <% post.tags.forEach(function(tag){ %>
+    <a href="<%- url_for(tag.path) %>">
+      <i class="fas fa-tag" aria-hidden></i>
+      <%= tag.name %>
+    </a>
+  <% }) %>
+</section>
+<% } %>

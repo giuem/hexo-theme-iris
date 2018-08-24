@@ -1,0 +1,10 @@
+<% if (post.categories && post.categories.length > 0) { %>
+<section class="categories">
+  <% post.categories.forEach(function(category){ %>
+    <a href="<%- url_for(category.path) %>">
+      <i class="fas fa-folder"></i>
+      <%= category.name %>
+    </a>
+  <% }) %>
+</section>
+<% } %>

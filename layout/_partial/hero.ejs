@@ -1,0 +1,16 @@
+<%
+  var style = "";
+  if (theme.hero) {
+    var color = theme.hero.color ? `background-color:${theme.hero.color}` : "";
+    var image = theme.hero.image ? `background-image: url('${theme.hero.image}')` : "";
+    style = color || image ? `style="${color};${image}"` : "";
+  }
+%>
+<section class="hero" <%- style %>>
+  <div class="hero-info">
+    <div class="hero-info-wrapper">
+      <h1><%= config.title %></h1>
+      <p><%= config.subtitle %></p>
+    </div>
+  </div>
+</section>

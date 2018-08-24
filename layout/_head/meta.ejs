@@ -1,0 +1,24 @@
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="renderer" content="webkit">
+
+<title><%= meta.title %></title>
+
+<meta name="format-detection" content="telephone=no"/>
+<% if (meta.description) { %>
+  <meta name="description" itemprop="description" content="<%= meta.description %>">
+<% } %>
+
+<% if (meta.keywords) { %>
+  <meta name="keywords" content="<%= meta.keywords %>">
+<% } %>
+
+<% //Disable Baidu tranformation %>
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="applicable-device"content="pc,mobile">
+
+<% if (page.next_link) { %>
+  <link rel="next" href="<%- url_for(page.next_link) %>" />
+<% } %>

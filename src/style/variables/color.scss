@@ -1,0 +1,11 @@
+$color-black: #2e3440;
+$color-grey: #b8bcce;
+$color-blue: #0366d6;
+
+
+$color-text: $color-black;
+$color-text-light: $color-grey;
+$color-link: $color-blue;
+$color-link-hover: darken($color-link, 10%);
+
+$color-border: #ddd;

@@ -1,0 +1,34 @@
+head:
+  title_separate: "|"
+  keywords: "hexo, iris"
+  # https://realfavicongenerator.net/
+  favicon: 
+    small: # including 16*16, 32x32, 48*48 PNGs, ICO format
+    large: "/icon.png" # 196x196, PNG format
+    ios: # ideally 180x180, at least 120x120
+  rss:
+
+header:
+  nav:
+    归档: "/archives"
+    关于: "/about"
+
+hero:
+  color: "#fff"
+  image: 
+  
+
+post:
+  excerpt: 300
+
+footer:
+  copyright: 2017
+
+blog:
+  avatar:
+
+analytics:
+  google:
+
+comment:
+  disqus:

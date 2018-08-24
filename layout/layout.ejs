@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html <% if(config.language) { %>lang="<%- config.language %>"<% } %>>
+  <%- partial('_head/index') %>
+  <body>
+    <%- partial("_partial/header") %>
+    <main class="main">
+      <%- body %> 
+    </main>
+    <%- partial("_partial/footer", {}, {cache: true}) %>
+  </body>
+</html>

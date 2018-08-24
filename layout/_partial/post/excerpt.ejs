@@ -1,0 +1,21 @@
+<article class="post post__excerpt">
+  <header class="post-header">
+    <h2 class="post-title">
+      <a href="<%- url_for(post.path) %>"><%= post.title %></a>
+    </h2>
+    <section class="post-meta">
+      <%- partial('components/time', { post: post }) %>
+    </section>
+  </header>
+  <section class="post-content">
+    <% if (post.excerpt) { %>
+      <%- post.excerpt %>
+    <% } else { %>
+      <p>
+        <%- strip_html(truncate(post.content, {length: theme.post.excerpt })) %>
+      </p>
+    <% } %>
+    <a class="post-more" href="<%= url_for(post.path) %>#more"><%= __("post.read_more") %></a>
+  </section>
+  <%- partial("post-footer", { post: post }) %>
+</article>

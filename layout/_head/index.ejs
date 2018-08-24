@@ -1,0 +1,56 @@
+<%
+var title = page.title;
+var title_separate = theme.head.title_separate ? ' ' + theme.head.title_separate + ' ' : '';
+if (is_archive()) {
+  title = __('archive.title');
+  if (is_month()) {
+    title += ': ' + page.year + '/' + page.month;
+  } else if (is_year()) {
+    title += ': ' + page.year;
+  }
+} else if (is_category()) {
+  title = __('category.title') + ': ' + page.category;
+} else if (is_tag()) {
+  title = __('tag.title') + ': ' + page.tag;
+}
+
+if (title) {
+  title += title_separate + config.title;
+} else {
+  title = config.title;
+  if (config.subtitle) title += title_separate + config.subtitle;
+}
+
+var description = config.description;
+if (page.description) {
+  description = page.description;
+} else if (page.excerpt) {
+  description = strip_html(page.excerpt).replace(/^s*/, '').replace(/s*$/, '');
+} else if (page.content && theme.post.excerpt) {
+  description = strip_html(truncate(page.content, {length: theme.post.excerpt })).replace(/[\r\n]/g, "");
+}
+
+var keywords = theme.head.keywords;
+if (page.tags && page.tags.each) {
+  page.tags.each(function(tag) {
+    keywords += "," + "tag.name";
+  })
+}
+
+var meta = {
+  title,
+  description,
+  keywords
+}
+%>
+<head>
+  <%- partial("meta", {meta}) %>
+  <%- partial("source", {}, {cache: true}) %>
+  <%- partial("favicon", {}, {cache: true}) %>
+  <%- partial("rss", {}, {cache: true}) %>
+  <%- partial("open-graph", {meta}) %>
+  <%- partial("structured-data", {meta}) %>
+  <%- //partial("custom", {}, {cache: true}) %>
+
+  <%- partial("_plugins/analytics/index", {}, {cache: true}) %>
+</head>

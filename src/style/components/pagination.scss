@@ -1,0 +1,27 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+  font-size: $font-size-7;
+
+  a {
+    padding: 0.6em 1em;
+    background: $color-blue;
+    color: white;
+    transition: background-color 200ms ease-out;
+    border-radius: 1px;
+    &:hover {
+      background: rgba($color-blue, 0.8)
+    }
+  }
+
+  .prev {
+    margin-right: auto;
+    @include icon-back();
+  }
+
+  .next {
+    margin-left: auto;
+    @include icon-forward();
+  }
+}

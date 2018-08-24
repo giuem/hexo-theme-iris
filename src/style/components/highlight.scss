@@ -1,0 +1,134 @@
+.highlight {
+  line-height: 1.5;
+  overflow: auto;
+  margin: 1.2em 0;
+  font-size: $font-size-7;
+
+  background-color: #fafbfc;
+  border-radius: 3px;
+
+  figcaption {
+    margin: 0.5em;
+    font-size: $font-size-7;
+    float: right;
+    font-style: italic;
+
+    span:not(:last-child)::after {
+      content: "/";
+      padding: 0 0.5em;
+      color: $color-text;
+    }
+  }
+
+  table {
+    margin: 0;
+    width: auto;
+    border: none;
+  }
+
+  td,
+  tr {
+    padding: 0;
+    border: none;
+  }
+
+  pre {
+    margin: 0;
+  }
+
+  .gutter {
+    color: #999;
+    border-right: 1px solid #efefef;
+    text-align: right;
+    user-select: none;
+    pre {
+      padding: 0 0.9em;
+    }
+  }
+
+  .code {
+    pre {
+      padding: 1em 1.2em;
+    }
+  }
+
+  .subst,
+  .title {
+    font-weight: normal;
+    color: #000;
+  }
+
+  .comment,
+  .quote {
+    color: #808080;
+    font-style: italic;
+  }
+
+  .meta {
+    color: #808000;
+  }
+
+  .section,
+  .name,
+  .literal,
+  .keyword,
+  .selector-tag,
+  .type,
+  .selector-id,
+  .selector-class {
+    font-weight: bold;
+    color: #000080;
+  }
+
+  .attribute,
+  .number,
+  .regexp,
+  .link {
+    font-weight: bold;
+    color: #0000ff;
+  }
+
+  .number,
+  .regexp,
+  .link {
+    font-weight: normal;
+  }
+
+  .string {
+    color: #008000;
+    font-weight: bold;
+  }
+
+  .symbol,
+  .bullet,
+  .formula {
+    color: #000;
+    background: #d0eded;
+    font-style: italic;
+  }
+
+  .doctag {
+    text-decoration: underline;
+  }
+
+  .variable,
+  .template-variable {
+    color: #660e7a;
+  }
+
+  .addition {
+    background: #baeeba;
+  }
+
+  .deletion {
+    background: #ffc8bd;
+  }
+
+  .emphasis {
+    font-style: italic;
+  }
+
+  .strong {
+    font-weight: bold;
+  }
+}

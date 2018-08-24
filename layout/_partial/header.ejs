@@ -1,0 +1,25 @@
+<%
+  var hasHero = is_home();
+  var noHeroClass= hasHero ? "" : " header__no-hero";
+%>
+
+<header class="header<%= noHeroClass %>">
+  <div class="header-wrapper">
+    <div class="header__left">
+      <div class="header-logo">
+        <a href="<%= config.root %>"><%= config.title %></a>
+      </div>
+    </div>
+    <div class="header__right">
+      <nav class="header-nav">
+        <% _.forIn(theme.header.nav, function(link, name){ %>
+          <a href="<%= link %>"><%= name %></a>
+        <% }) %>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<% if (hasHero) { %> 
+  <%- partial("_partial/hero") %>
+<% } %>

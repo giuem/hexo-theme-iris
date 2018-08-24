@@ -1,0 +1,29 @@
+post:
+  read_more: "»"
+
+nav:
+  prev_page: "Previous"
+  next_page: "Next"
+
+archive:
+  title: "Archives"
+  counter:
+    zero: "No posts."
+    one: "1 post in total."
+    other: "%d posts in total."
+
+category:
+  title: "Category"
+  counter:
+    zero: "No posts in this category."
+    one: "1 post in this category."
+    other: "%d posts in this category."
+
+tag:
+  title: "Tag"
+  counter:
+    zero: "No posts in this tag."
+    one: "1 post in this tag."
+    other: "%d posts in this tag."
+
+

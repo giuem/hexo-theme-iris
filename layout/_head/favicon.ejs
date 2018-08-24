@@ -1,0 +1,12 @@
+<% var icon = theme.head.favicon; %>
+<% if (icon) { %>
+  <% if (icon.small) { %>
+    <link rel="icon shortcut" type="image/ico" href="<%= url_for(icon.small) %>">
+  <% } %>
+  <% if (icon.large) { %>
+    <link rel="icon" type="image/png" href="<%= url_for(icon.large) %>">
+  <% } %>
+  <% if (icon.ios) { %>
+    <link rel="apple-touch-icon" href="<%= url_for(icon.ios) %>">
+  <% } %>
+<% } %>

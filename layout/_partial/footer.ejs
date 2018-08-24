@@ -1,0 +1,13 @@
+<footer class="footer">
+  <div class="footer-wrapper">
+    <p class="copyright">
+      &copy; 
+      <% theme.footer.copyright? `${theme.footer.copyright} -` : '' %>
+      <%- date(new Date(), 'YYYY') %>
+      <%= config.author %>
+    </p>
+    <p class="theme">
+      Hexo Theme <a href="https://github.com/giuem/hexo-theme-iris" target="_blank" rel="noopener noreferrer">Iris</a> with <i class="fas fa-heart"></i>
+    </p>
+  </div>
+</footer>
