@@ -1,0 +1,15 @@
+<% if (theme.header.nav) { %>
+<nav class="nav">
+  <div id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></div>
+  <div class="nav-wrapper">
+    <ul>
+      <li id="nav-close" class="nav-close"><i class="fas fa-arrow-right"></i></li>
+      <% _.forIn(theme.header.nav, function(link, name){ %>
+        <li><a class="nav-link" href="<%= link %>"><%= name %></a></li>
+      <% }) %>
+    </ul>
+  </div>
+  <div class="nav-overlay"></div>
+
+</nav>
+<% } %>

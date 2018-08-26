@@ -4,7 +4,7 @@ import {
   faArrowAltCircleLeft,
   faArrowAltCircleRight
 } from "@fortawesome/free-regular-svg-icons";
-import { faTag, faFolder, faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faTag, faFolder, faHeart, faBars, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 library.add(
   faCalendar,
@@ -12,7 +12,9 @@ library.add(
   faArrowAltCircleRight,
   faTag,
   faFolder,
-  faHeart
+  faHeart,
+  faBars,
+  faArrowRight
 );
 
 export default function init() {
