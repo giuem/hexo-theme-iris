@@ -13,11 +13,7 @@
       <% } %>
     </div>
     <div class="header__right">
-      <nav class="header-nav">
-        <% _.forIn(theme.header.nav, function(link, name){ %>
-          <a href="<%= link %>"><%= name %></a>
-        <% }) %>
-      </nav>
+      <%- partial("nav") %>
     </div>
   </div>
 </header>
