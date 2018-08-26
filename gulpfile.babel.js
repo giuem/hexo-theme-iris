@@ -54,7 +54,7 @@ export function build() {
 
 function revAll() {
   return gulp
-    .src("source/dist/**", { base: "source" })
+    .src("source/dist/**/*.{js,css}", { base: "source" })
     .pipe(rev())
     .pipe(revDel())
     .pipe(gulp.dest("source/"))
