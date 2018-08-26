@@ -1,20 +1,24 @@
 .post {
-  padding: 3.5rem 0;
+  padding: 3rem 0;
 
   &__excerpt {
     & + & {
       border-top: 1px dashed $color-border;
     }
-    .post-content p {
-      display: inline;
-      opacity: 0.9;
+
+    .post-title {
+      font-size: $font-size-3;
+    }
+
+    .post-content {
+      opacity: 0.8;
     }
   }
 
   &-meta {
-    font-size: $font-size-8;
+    font-size: $font-size-7;
     color: $color-text-light;
-    margin: 1rem 0;
+    margin: 0.5rem 0;
     display: flex;
     >*:not(:first-child)::before {
       content: "|";
@@ -34,9 +38,15 @@
   }
 
   &-title {
-    color: inherit;
+    // color: inherit;
     // font-size: $font-size-1;
     margin: 0;
+    a {
+      color: mix($color-black, $color-blue, 40%);
+      &:hover {
+        color: mix($color-black, $color-blue, 20%);
+      }
+    }
   }
 
   // &-time {
