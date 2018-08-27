@@ -7,6 +7,8 @@ head:
     large: /favicon-192x192.png # 196x196, PNG format
     ios: /apple-touch-icon.png # ideally 180x180, at least 120x120
   rss: /atom.xml
+  custom:
+    - <script>console.log(1)</script>
 
 header:
   nav:

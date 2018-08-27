@@ -49,8 +49,8 @@ var meta = {
   <%- partial("favicon", {}, {cache: true}) %>
   <%- partial("rss", {}, {cache: true}) %>
   <%- partial("open-graph", {meta}) %>
-  <%- partial("structured-data", {meta}) %>
-  <%- //partial("custom", {}, {cache: true}) %>
+  <%- partial("custom", {}, {cache: true}) %>
 
   <%- partial("_plugins/analytics/index", {}, {cache: true}) %>
+  <%- partial("structured-data", {meta}) %>
 </head>
