@@ -46,6 +46,7 @@ var meta = {
 <head>
   <%- partial("meta", {meta}) %>
   <%- partial("source", {}, {cache: true}) %>
+  <%- partial("dns-prefetch", {}, {cache: true}) %>
   <%- partial("favicon", {}, {cache: true}) %>
   <%- partial("rss", {}, {cache: true}) %>
   <%- partial("open-graph", {meta}) %>

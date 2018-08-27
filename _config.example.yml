@@ -9,6 +9,8 @@ head:
   rss: /atom.xml
   custom:
     - <script>console.log(1)</script>
+  prefetch:
+    - example.com
 
 header:
   nav:

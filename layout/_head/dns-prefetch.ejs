@@ -1,0 +1,15 @@
+<meta http-equiv="x-dns-prefetch-control" content="on">
+
+<% if (theme.analytics.google) { %>
+  <link rel="dns-prefetch" href="//www.googletagmanager.com">
+<% } %>
+
+<% if (theme.comment.disqus) { %>
+  <link rel="dns-prefetch" href="//<%=theme.comment.disqus%>.disqus.com">
+<% } %>
+
+<% if (theme.head.prefetch) {
+  for (var i in theme.head.prefetch) { 
+    %><link rel="dns-prefetch" href="//<%- theme.head.prefetch[i] %>"><%
+  }
+} %>
