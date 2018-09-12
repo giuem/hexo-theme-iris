@@ -22,7 +22,7 @@
     color: rgba($color: white, $alpha: 0.98);
     background-image: linear-gradient(0deg, rgba($color: black, $alpha: 0.66), rgba($color: black, $alpha: 0));
     &-wrapper {
-      @include container($width: $header-width * 0.95);
+      @include container;
       margin: 3rem auto 1.5rem;
       text-shadow: 3px 4px 5px rgba(0,0,0,.33);
       h1, p {
