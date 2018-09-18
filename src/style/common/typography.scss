@@ -9,6 +9,7 @@ html {
     map-get($font-size-max, 'fs')
   );
   line-height: $line-height-default;
+  text-rendering: optimizeLegibility;
   // @include is-desktop {
   //   // font-size: $font-size-desktop;
   //   line-height: $line-height-desktop;
