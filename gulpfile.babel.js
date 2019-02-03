@@ -7,7 +7,6 @@ import babel from "rollup-plugin-babel";
 import resolve from "rollup-plugin-node-resolve";
 import { uglify } from "rollup-plugin-uglify";
 import rev from "gulp-rev";
-import revDel from "gulp-rev-delete-original";
 
 const isDev = process.env.NODE_ENV !== "production";
 
@@ -54,7 +53,6 @@ function revAll() {
   return gulp
     .src("source/dist/**/*.{js,css}", { base: "source" })
     .pipe(rev())
-    .pipe(revDel())
     .pipe(gulp.dest("source/"))
     .pipe(rev.manifest())
     .pipe(gulp.dest("source/dist"));

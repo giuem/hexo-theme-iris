@@ -4,4 +4,7 @@ node_modules
 .DS_Store
 
 source/dist/*.map
+source/dist/iris.js
+source/dist/iris.css
+
 _config.yml
