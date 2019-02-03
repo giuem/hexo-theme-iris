@@ -22,21 +22,11 @@ export function build() {
       }),
       postcss({
         extract: true,
-        sourceMap: isDev,
-        plugins: [
-          require("autoprefixer")(),
-          require("cssnano")({
-            preset: ["default"]
-          })
-        ]
+        sourceMap: isDev
       }),
       resolve(),
       babel({
-        exclude: "node_modules/**",
-        babelrc: false,
-        presets: ["@babel/preset-env"],
-        plugins: ["@babel/external-helpers"],
-        externalHelpers: true
+        exclude: "node_modules/**"
       }),
       !isDev && uglify()
     ]
