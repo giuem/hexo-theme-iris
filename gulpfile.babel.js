@@ -36,7 +36,7 @@ export function build() {
       babel({
         exclude: "node_modules/**",
         babelrc: false,
-        presets: [["@babel/preset-env", { modules: false }]],
+        presets: ["@babel/preset-env"],
         plugins: ["@babel/external-helpers"],
         externalHelpers: true
       }),
