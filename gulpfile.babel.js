@@ -6,7 +6,6 @@ import clear from "rollup-plugin-clear";
 import babel from "rollup-plugin-babel";
 import resolve from "rollup-plugin-node-resolve";
 import { uglify } from "rollup-plugin-uglify";
-import filesize from "rollup-plugin-filesize";
 import rev from "gulp-rev";
 import revDel from "gulp-rev-delete-original";
 
@@ -40,8 +39,7 @@ export function build() {
         plugins: ["@babel/external-helpers"],
         externalHelpers: true
       }),
-      !isDev && uglify(),
-      !isDev && filesize()
+      !isDev && uglify()
     ]
   }).then(bundle => {
     return bundle.write({
