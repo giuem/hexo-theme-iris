@@ -1,0 +1,9 @@
+<% if (theme.service_worker && theme.service_worker.enable && theme.service_worker.file) { %>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('<%- theme.service_worker.file %>');
+  });
+}
+</script
+<% } %>

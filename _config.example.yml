@@ -12,6 +12,10 @@ head:
   prefetch:
     - example.com
 
+service_worker:
+  enable: true
+  file: /sw.js
+
 header:
   nav:
     Archive: "/archives"
