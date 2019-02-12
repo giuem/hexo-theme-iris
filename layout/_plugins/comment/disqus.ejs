@@ -1,24 +1,54 @@
-<% if (theme.comment.disqus) { %>
+<% if (theme.comment.disqus && theme.comment.disqus.enable) { %>
 <div id="disqus_thread"></div>
-<script type="text/javascript">
-  var disqus_config = function () {
-    this.page.url = '<%- page.permalink %>';
-    this.page.identifier = '<%- page.slug %>';
-    this.page.title = '<%- page.title %>';
-  };
-  if (!document.getElementById('disqus-embed')) {
-    var d = document, s = d.createElement('script');
-    s.type = 'text/javascript';
-    s.id = 'disqus-embed';
-    s.async = true;
-    s.src = '//<%=theme.comment.disqus%>.disqus.com/embed.js';
-    (d.head || d.body).appendChild(s);
-  }
-  if(typeof DISQUS == 'object'){
-    DISQUS.reset({
-        reload: true,
-        config: disqus_config
-    })
-  }
-</script>
+  <% if (theme.comment.disqus.mirror) { %>
+    <script>
+      (function(d){
+        window.DISQUS = null;
+        var css = d.createElement("link");
+        css.rel = "stylesheet";
+        css.href = "https://cdn.jsdelivr.net/npm/disqusjs@1.2.2/dist/disqusjs.css";
+        d.head.appendChild(css);
+
+        var js = d.createElement("script");
+        js.async = true;
+        js.src = "https://cdn.jsdelivr.net/npm/disqusjs@1.2.2/dist/disqus.js";
+        js.onload = function() {
+          new DisqusJS({
+            shortname: '<%= theme.comment.disqus.shortname %>',
+            siteName: '<%= config.title %>',
+            identifier: '<%- page.slug %>',
+            url: '<%- page.permalink %>',
+            title: '<%- page.title %>',
+            api: '<%= theme.comment.disqus.api %>',
+            apikey: '<%= theme.comment.disqus.apiKey %>',
+            admin: '<%= theme.comment.disqus.admin %>',
+            adminLabel: '<%= theme.comment.disqus.adminLabel %>'
+          });
+        }
+        d.head.appendChild(js);
+      })(document);
+    </script>
+  <% } else { %>
+  <script>
+    var disqus_config = function () {
+      this.page.url = '<%- page.permalink %>';
+      this.page.identifier = '<%- page.slug %>';
+      this.page.title = '<%- page.title %>';
+    };
+    if (!document.getElementById('disqus-embed')) {
+      var d = document, s = d.createElement('script');
+      s.type = 'text/javascript';
+      s.id = 'disqus-embed';
+      s.async = true;
+      s.src = '//<%=theme.comment.disqus.shortname%>.disqus.com/embed.js';
+      (d.head || d.body).appendChild(s);
+    }
+    if(typeof DISQUS == 'object'){
+      DISQUS.reset({
+          reload: true,
+          config: disqus_config
+      })
+    }
+  </script>
+  <% } %>
 <% } %>

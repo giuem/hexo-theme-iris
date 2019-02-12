@@ -41,3 +41,11 @@ analytics:
 
 comment:
   disqus:
+    enable: true
+    shortname: giuem
+    # see https://github.com/SukkaW/DisqusJS
+    mirror: false
+    api:
+    apiKey: 
+    admin: 
+    adminLabel: 
