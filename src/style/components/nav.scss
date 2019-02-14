@@ -17,7 +17,7 @@
     font-size: $font-size-7;
     line-height: $header-height;
 
-    @include underline-from-center();
+    // @include underline-from-center();
 
     &__active {
       color: $color-blue !important;
