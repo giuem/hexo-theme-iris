@@ -24,6 +24,7 @@ header:
 hero:
   color: 
   image: 
+  image_small: # optional, smaller image for max-width=768px device
   
 
 post:

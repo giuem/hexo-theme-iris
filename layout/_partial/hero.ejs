@@ -1,12 +1,25 @@
 <%
-  var style = "";
+  var bgImage = (src) => src ? `background-image: url('${src}');` : "";
   if (theme.hero) {
-    var color = theme.hero.color ? `background-color:${theme.hero.color}` : "";
-    var image = theme.hero.image ? `background-image: url('${theme.hero.image}')` : "";
-    style = color || image ? `style="${color};${image}"` : "";
+    var colorStyle = theme.hero.color ? `background-color:${theme.hero.color};` : "";
+    var bgStyle = bgImage(theme.hero.image);
+    var bgSmStyle = bgImage(theme.hero.image_small);
   }
 %>
-<section class="hero" <%- style %>>
+
+<style>
+.hero {
+  <%- colorStyle + bgStyle %>
+}
+
+@media (max-width: 768px) {
+  .hero {
+    <%- bgSmStyle %>
+  }
+}
+</style>
+
+<section class="hero">
   <div class="hero-info">
     <div class="hero-info-wrapper">
       <h1><%= config.title %></h1>
