@@ -101,6 +101,7 @@
         width: 100%;
         color: $color-text;
         transition: 300ms background-color ease;
+        display: inline-block;
         &:hover {
           background: rgba(0, 0, 0, 0.05);
         }
