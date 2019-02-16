@@ -1,7 +1,6 @@
 <% if (theme.service_worker) { %>
 <script>
 if ('serviceWorker' in navigator) {
-  // register
   <% if (theme.service_worker.enable && theme.service_worker.file) { %>
     window.addEventListener('load', function () {
       navigator.serviceWorker.register('<%- theme.service_worker.file %>');
@@ -12,8 +11,7 @@ if ('serviceWorker' in navigator) {
         registration.unregister()
       }
     })
-  }
+  <% } %>
 }
-
-
 </script>
+<% } %>
