@@ -7,9 +7,9 @@ if ('serviceWorker' in navigator) {
     });
   <% } else { %>
     navigator.serviceWorker.getRegistrations().then(function(registrations) {
-      for(var registration of registrations) {
+      registrations.map(function(registration) {
         registration.unregister()
-      }
+      })
     })
   <% } %>
 }
