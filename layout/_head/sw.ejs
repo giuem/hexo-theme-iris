@@ -1,9 +1,19 @@
-<% if (theme.service_worker && theme.service_worker.enable && theme.service_worker.file) { %>
+<% if (theme.service_worker) { %>
 <script>
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('<%- theme.service_worker.file %>');
-  });
+  // register
+  <% if (theme.service_worker.enable && theme.service_worker.file) { %>
+    window.addEventListener('load', function () {
+      navigator.serviceWorker.register('<%- theme.service_worker.file %>');
+    });
+  <% } else { %>
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(var registration of registrations) {
+        registration.unregister()
+      }
+    })
+  }
 }
-</script
-<% } %>
+
+
+</script>
