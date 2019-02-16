@@ -4,8 +4,8 @@
   <link rel="dns-prefetch" href="//www.googletagmanager.com">
 <% } %>
 
-<% if (theme.comment.disqus) { %>
-  <link rel="dns-prefetch" href="//<%=theme.comment.disqus%>.disqus.com">
+<% if (theme.comment.disqus && theme.comment.disqus.shortname) { %>
+  <link rel="dns-prefetch" href="//<%=theme.comment.disqus.shortname%>.disqus.com">
 <% } %>
 
 <% if (theme.head.prefetch) {
