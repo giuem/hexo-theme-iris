@@ -6,12 +6,12 @@
         window.DISQUS = null;
         var css = d.createElement("link");
         css.rel = "stylesheet";
-        css.href = "https://cdn.jsdelivr.net/npm/disqusjs@1.2.2/dist/disqusjs.css";
+        css.href = "https://cdn.jsdelivr.net/npm/disqusjs@1.2.3/dist/disqusjs.css";
         d.head.appendChild(css);
 
         var js = d.createElement("script");
         js.async = true;
-        js.src = "https://cdn.jsdelivr.net/npm/disqusjs@1.2.2/dist/disqus.js";
+        js.src = "https://cdn.jsdelivr.net/npm/disqusjs@1.2.3/dist/disqus.js";
         js.onload = function() {
           new DisqusJS({
             shortname: '<%= theme.comment.disqus.shortname %>',
