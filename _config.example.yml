@@ -1,36 +1,49 @@
 head:
   title_separate: "|"
+  # (optional) head meta keywords
   keywords: "iris"
-  # https://realfavicongenerator.net/
+  # icon generator: https://realfavicongenerator.net/
   favicon: 
     small: /favicon.ico # including 16*16, 32x32, 48*48 PNGs, ICO format
     large: /favicon-192x192.png # 196x196, PNG format
     ios: /apple-touch-icon.png # ideally 180x180, at least 120x120
+  # (optional) RSS link
   rss: /atom.xml
+  # (optional) HTML code append to <head>
   custom:
-    - <script>console.log(1)</script>
+    # - <script>console.log(1)</script>
+  # (optional) DNS prefetch
   prefetch:
-    - example.com
+    # - example.com
 
+# Service Worker
 service_worker:
-  enable: true
+  enable: false
+  # You need to create sw.js
+  # https://developers.google.com/web/tools/workbox/
   file: /sw.js
 
 header:
+  # nav links
+  # format: [title]: [link]
   nav:
     Archive: "/archives"
     About: "/about"
 
 hero:
+  # placeholder color
   color: 
+  # hero image
   image: 
-  image_small: # optional, smaller image for max-width=768px device
-  
+  # (optional) smaller image for max-width=768px device
+  image_small:
 
 post:
+  # max length to excerpt post
   excerpt: 300
 
 footer:
+  # (optional) copyright year
   copyright: 2015
 
 blog:
@@ -38,6 +51,7 @@ blog:
   slogan: 
 
 analytics:
+  # ga tid: UA-XXXX-YY
   google:
 
 comment:
