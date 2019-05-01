@@ -1,0 +1,27 @@
+<article class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      <%= page.title %>
+    </h1>
+  </header>
+  <section>
+    <% if (site.data.links) { %>
+      <ul class="links">
+        <% site.data.links.forEach(function (link) { %>
+          <li class="link">
+            <a class="link-href" href="<%= link.href %>" target="_blank">
+              <div class="link-avatar-wrapper">
+                <img class="link-avatar" src="<%= link.avatar %>"  alt="<%= link.title %>">
+              </div>
+              <span class="link-title"><%= link.title %></span>
+            </a>
+            <p class="link-slogan"><%= link.slogan %></p>
+          </li>
+        <% }) %>
+      </ul>
+    <% } %>
+  </section>
+  <section class="post-content">
+    <%- page.content %>
+  </section>
+</article>

@@ -1,2 +1,6 @@
-<%- partial('_partial/post/detail', { post: page }) %>
-<%- partial('_plugins/comment/index') %>
+<% if (page.layout === 'links') { %>
+  <%- partial('_pages/links') %>
+<% } else { %>
+  <%- partial('_partial/post/detail', { post: page }) %>
+  <%- partial('_plugins/comment/index') %>
+<% } %>
