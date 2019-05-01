@@ -9,7 +9,7 @@ $secondary-color: mix($color-blue, $color-text-light, 80%);
 
   &-wrapper {
     @include container;
-    text-align: center;
+    text-align: right;
   }
 
   p {

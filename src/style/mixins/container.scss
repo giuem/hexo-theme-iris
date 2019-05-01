@@ -3,5 +3,5 @@
 @mixin container($width: $container-width, $margin: 0 auto) {
   max-width: $width;
   margin: $margin;
-  padding: 0 1.2em;
+  padding: 0 1.5em;
 }
