@@ -30,6 +30,7 @@ theme: iris
 The following Hexo plugins is necessary:
 
 * [hexo-renderer-ejs](https://www.npmjs.com/package/hexo-renderer-ejs)
+* [hexo-generator-feed](https://www.npmjs.com/package/hexo-generator-feed)
 
 Some plugins is not necessary, but I strongly recommand:
 
