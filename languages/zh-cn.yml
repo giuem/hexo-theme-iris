@@ -1,5 +1,6 @@
 post:
   read_more: "»"
+  end: "完"
 
 nav:
   prev_page: "上一页"

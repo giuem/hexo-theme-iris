@@ -47,7 +47,7 @@
 
   &-content {
     margin: 1rem 0;
-    letter-spacing: 0.01rem;
+    // letter-spacing: 0.01rem;
     text-align: justify;
   }
 
@@ -57,6 +57,23 @@
   // }
   &-more {
     text-decoration: underline;
+  }
+
+  &-end {
+    position: relative;
+    margin: 3rem 0;
+    color: #ddd;
+    border-bottom: 0.2em dashed #eee;
+    &::after {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      padding: 0.5em;
+      background: #fff;
+      content: attr(data-text);
+    }
   }
 }
 

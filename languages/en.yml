@@ -1,5 +1,6 @@
 post:
   read_more: "»"
+  end: "End"
 
 nav:
   prev_page: "Previous"
