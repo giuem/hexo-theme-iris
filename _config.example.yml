@@ -41,6 +41,9 @@ hero:
 post:
   # max length to excerpt post
   excerpt: 300
+  toc:
+    enabled: true
+    max_depth: 3
 
 footer:
   # (optional) copyright year

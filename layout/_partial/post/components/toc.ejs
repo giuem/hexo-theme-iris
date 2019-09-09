@@ -1,0 +1,12 @@
+<% if (theme.post.toc && theme.post.toc.enabled) { %>
+  <section class="post-toc">
+    <header class="post-toc-title">
+      <%- __('post.toc') %>
+    </header>
+    <%- toc(post.content, {
+      class: 'post-toc-inst',
+      list_number: true,
+      max_depth: theme.post.toc.max_depth || 3
+    }) %>
+  </section>
+<% } %>

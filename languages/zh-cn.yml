@@ -1,6 +1,7 @@
 post:
   read_more: "»"
   end: "完"
+  toc: "目录"
 
 nav:
   prev_page: "上一页"
