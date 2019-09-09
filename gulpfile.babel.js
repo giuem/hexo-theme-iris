@@ -5,6 +5,7 @@ import progress from "rollup-plugin-progress";
 import clear from "rollup-plugin-clear";
 import babel from "rollup-plugin-babel";
 import resolve from "rollup-plugin-node-resolve";
+import commonjs from "rollup-plugin-commonjs";
 import { uglify } from "rollup-plugin-uglify";
 import rev from "gulp-rev";
 
@@ -14,9 +15,7 @@ export function build() {
   return rollup({
     input: "src/index.js",
     plugins: [
-      progress({
-        clearLine: false
-      }),
+      progress(),
       clear({
         targets: ["source/dist"]
       }),
@@ -24,6 +23,7 @@ export function build() {
         extract: true,
         sourceMap: isDev
       }),
+      commonjs(),
       resolve(),
       babel({
         exclude: "node_modules/**"
