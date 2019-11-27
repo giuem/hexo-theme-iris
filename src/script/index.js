@@ -2,14 +2,14 @@ import "intersection-observer";
 import IconInit from "./icon";
 import ZoomInit from "./zoom";
 import NavInit from "./nav";
-import QuickLinkInit from "./quicklink";
+// import QuickLinkInit from "./quicklink";
 import TocInit from "./toc";
 
 function init() {
   IconInit();
   NavInit();
   ZoomInit();
-  QuickLinkInit();
+  // QuickLinkInit();
   TocInit();
 }
 
