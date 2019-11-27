@@ -7,7 +7,6 @@ export default function() {
 
   const intersectionObserver = new IntersectionObserver(
     entries => {
-      console.log(entries)
       entries.forEach(entry => {
         const href = entry.target.getAttribute("href");
         const headingTocLink = document.querySelector(
