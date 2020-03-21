@@ -10,6 +10,8 @@ html {
   );
   line-height: $line-height-default;
   text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  // -webkit-font-smo
   // @include is-desktop {
   //   // font-size: $font-size-desktop;
   //   line-height: $line-height-desktop;
