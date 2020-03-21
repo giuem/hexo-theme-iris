@@ -1,11 +1,22 @@
 $color-black: #343434;
-$color-grey: #6a739c;
+$color-white: #fff;
 $color-blue: #0366d6;
+$color-orange: #ff6c00;
 
-
+$color-primary: $color-blue;
+$color-bg: #fff;
 $color-text: $color-black;
-$color-text-light: $color-grey;
-$color-link: $color-blue;
+$color-text-light: #6a739c;
+$color-link: $color-primary;
 $color-link-hover: darken($color-link, 10%);
-
 $color-border: #ddd;
+
+$color-primary-dark: $color-orange;
+$color-bg-dark: #121212;
+$color-text-dark: #eee;
+$color-text-light-dark: #bbb;
+$color-link-dark: $color-primary-dark;
+$color-link-hover-dark: lighten($color-link-dark, 10%);
+$color-border-dark: #888;
+
+

@@ -6,12 +6,19 @@
 
   a {
     padding: 0.6em 1em;
-    background: $color-blue;
+    background: $color-primary;
     color: white;
     transition: background-color 200ms ease-out;
     border-radius: 1px;
     &:hover {
-      background: rgba($color-blue, 0.8)
+      background: rgba($color-primary, 0.8)
+    }
+    @include dark {
+      color: #000;
+      background: $color-primary-dark;
+      &:hover {
+        background: rgba($color-primary-dark, 0.8)
+      }
     }
   }
 

@@ -1,9 +1,12 @@
-$primary-color: $color-grey;
-$secondary-color: mix($color-blue, $color-text-light, 80%);
+$secondary-color: mix($color-primary, $color-text-light, 80%);
+$secondary-color-dark: mix($color-primary-dark, $color-text-light-dark, 80%);
 
 .footer {
   font-size: $font-size-8;
-  color: $primary-color;
+  color: $color-text-light;
+  @include dark {
+    color: $color-text-light-dark;
+  }
   padding: 3rem 0 1rem;
   margin-top: 3rem;
 
@@ -19,11 +22,17 @@ $secondary-color: mix($color-blue, $color-text-light, 80%);
   a {
     color: $secondary-color;
     text-decoration: underline;
+    @include dark {
+      color: $secondary-color-dark;
+    }
   }
 
   .theme {
     svg {
-      color: $secondary-color
+      color: $secondary-color;
+      @include dark {
+        color: $secondary-color-dark;
+      }
     }
   }
 }

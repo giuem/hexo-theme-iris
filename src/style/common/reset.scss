@@ -33,8 +33,11 @@ html {
 
 body {
   margin: 0;
-  background: white;
+  background: $color-bg;
   position: relative;
+  @include dark {
+    background: $color-bg-dark;
+  }
 }
 
 

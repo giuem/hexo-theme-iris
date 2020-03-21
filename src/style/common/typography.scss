@@ -26,6 +26,10 @@ body {
     hyphens: auto;
     word-wrap: break-word;
   }
+
+  @include dark {
+    color: $color-text-dark;
+  }
 }
 
 h1,
@@ -77,6 +81,9 @@ strong {
 hr {
   border: 0;
   border-top: 1px solid $color-border;
+  @include dark {
+    border-color: $color-border-dark;
+  }
 }
 
 p,
@@ -104,6 +111,13 @@ a {
   &:hover {
     color: $color-link-hover;
   }
+
+  @include dark {
+    color: $color-link-dark;
+    &:hover {
+      color: $color-link-hover-dark;
+    }
+  }
 }
 
 img {
@@ -116,7 +130,10 @@ img {
 blockquote {
   font-style: italic;
   padding: 0 1.5em;
-  border-left: $color-blue solid 0.2em;
+  border-left: $color-primary solid 0.2em;
+  @include dark {
+    border-left-color: $color-primary-dark;
+  }
 
   p {
     margin: 0;
@@ -150,6 +167,9 @@ table {
 
   tr {
     border-top: 1px solid $color-border;
+    @include dark {
+      border-top-color: $color-border-dark;
+    }
     // &:nth-child(2n) {
     //   background: #f9f9f9;
     // }
@@ -160,11 +180,17 @@ table {
     text-align: left;
     border: 1px solid $color-border;
     padding: 0.3em 0.6em;
+    @include dark {
+      border-color: $color-border-dark;
+    }
   }
 }
 
 code {
-  color: $color-blue;
+  color: $color-primary;
+  @include dark {
+    color: $color-primary-dark;
+  }
   font-size: $font-size-7;
   letter-spacing: -0.01em;
   &::before,

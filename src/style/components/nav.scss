@@ -20,12 +20,18 @@
     // @include underline-from-center();
 
     &__active {
-      color: $color-blue !important;
+      color: $color-primary !important;
       font-weight: bold;
+      @include dark {
+        color: $color-primary-dark !important;
+      }
     }
 
     &:hover {
-      color: $color-blue;
+      color: $color-primary;
+      @include dark {
+        color: $color-primary-dark;
+      }
     }
   }
 
@@ -49,6 +55,9 @@
         box-shadow: 0 0 1px rgba(0, 0, 0, 0);
         .header__no-hero & {
           background: $color-black;
+          @include dark {
+            background: #fff;
+          }
         }
       }
 
@@ -86,9 +95,13 @@
       position: absolute;
       top: $header-height * 1.1;
       right: 1.2em;
-      background: #fff;
+      background: $color-bg;
       width: 32vw;
       box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.1);
+      @include dark {
+        background: #272727;
+        box-shadow: none;
+      }
 
       li {
         display: block;
@@ -100,10 +113,16 @@
         line-height: 1.5;
         width: 100%;
         color: $color-text;
+        @include dark {
+          color: $color-text-dark;
+        }
         transition: 300ms background-color ease;
         display: inline-block;
         &:hover {
           background: rgba(0, 0, 0, 0.05);
+          @include dark {
+            background: rgba(255, 255, 255, 0.05);
+          }
         }
         &::before {
           background: transparent;

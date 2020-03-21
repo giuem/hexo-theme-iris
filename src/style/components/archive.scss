@@ -3,6 +3,9 @@
 
   &-header {
     border-bottom: 0.1em dashed $color-border;
+    @include dark {
+      border-bottom-color: $color-border-dark;
+    }
   }
 
   &-title {

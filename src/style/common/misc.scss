@@ -1,4 +1,10 @@
-::selection {
-  background: #444;
-  color: #fff;
+// ::selection {
+//   background: #444;
+//   color: #fff;
+// }
+.medium-zoom-overlay {
+  background-color: #fff !important;
+  @include dark {
+    background-color: #000 !important;
+  }
 }

@@ -4,7 +4,8 @@
   margin: 1.2em 0;
   font-size: $font-size-8;
 
-  background-color: #fafbfc;
+  color: #545454;
+  background: #fefefe;
   border-radius: 3px;
 
   figcaption {
@@ -52,76 +53,58 @@
     }
   }
 
-  .subst,
-  .title {
-    font-weight: normal;
-    color: #000;
-  }
-
   .comment,
   .quote {
-    color: #808080;
-    font-style: italic;
+    color: #696969;
   }
 
-  .meta {
-    color: #808000;
-  }
-
-  .section,
+  /* Red */
+  .variable,
+  .template-variable,
+  .tag,
   .name,
-  .literal,
-  .keyword,
-  .selector-tag,
-  .type,
   .selector-id,
-  .selector-class {
-    font-weight: bold;
-    color: #000080;
-  }
-
-  .attribute,
-  .number,
+  .selector-class,
   .regexp,
-  .link {
-    font-weight: bold;
-    color: #0000ff;
+  .deletion {
+    color: #d91e18;
   }
 
+  /* Orange */
   .number,
-  .regexp,
+  .built_in,
+  .builtin-name,
+  .literal,
+  .type,
+  .params,
+  .meta,
   .link {
-    font-weight: normal;
+    color: #aa5d00;
   }
 
-  .string {
-    color: #008000;
-    font-weight: bold;
+  /* Yellow */
+  .attribute {
+    color: #aa5d00;
   }
 
+  /* Green */
+  .string,
   .symbol,
   .bullet,
-  .formula {
-    color: #000;
-    background: #d0eded;
-    font-style: italic;
-  }
-
-  .doctag {
-    text-decoration: underline;
-  }
-
-  .variable,
-  .template-variable {
-    color: #660e7a;
-  }
-
   .addition {
-    background: #baeeba;
+    color: #008000;
   }
 
-  .deletion {
-    background: #ffc8bd;
+  /* Blue */
+  .title,
+  .section {
+    color: #007faa;
+  }
+
+  /* Purple */
+  .keyword,
+  .selector-tag {
+    color: #7928a1;
   }
 
   .emphasis {
@@ -130,5 +113,65 @@
 
   .strong {
     font-weight: bold;
+  }
+
+  @include dark {
+    background: #2b2b2b;
+    color: #f8f8f2;
+
+    /* comment */
+    .comment,
+    .quote {
+      color: #d4d0ab;
+    }
+
+    /* Red */
+    .variable,
+    .template-variable,
+    .tag,
+    .name,
+    .selector-id,
+    .selector-class,
+    .regexp,
+    .deletion {
+      color: #ffa07a;
+    }
+
+    /* Orange */
+    .number,
+    .built_in,
+    .builtin-name,
+    .literal,
+    .type,
+    .params,
+    .meta,
+    .link {
+      color: #f5ab35;
+    }
+
+    /* Yellow */
+    .attribute {
+      color: #ffd700;
+    }
+
+    /* Green */
+    .string,
+    .symbol,
+    .bullet,
+    .addition {
+      color: #abe338;
+    }
+
+    /* Blue */
+    .title,
+    .section {
+      color: #00e0e0;
+    }
+
+    /* Purple */
+    .keyword,
+    .selector-tag {
+      color: #dcc6e0;
+    }
   }
 }

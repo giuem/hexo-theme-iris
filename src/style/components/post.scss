@@ -4,6 +4,9 @@
   &__excerpt {
     & + & {
       border-top: 2px dashed $color-border;
+      @include dark {
+        border-top-color: $color-border-dark;
+      }
     }
 
     .post-title {
@@ -18,6 +21,9 @@
   &-meta {
     font-size: $font-size-7;
     color: $color-text-light;
+    @include dark {
+      color: $color-text-light-dark;
+    }
     margin: 0.5rem 0;
     display: flex;
     >*:not(:first-child)::before {
@@ -29,6 +35,9 @@
       margin-right: 0.3em;
       &:hover {
         color: $color-text;
+        @include dark {
+          color: $color-text-dark;
+        }
       }
     }
   }
@@ -38,16 +47,25 @@
     // font-size: $font-size-1;
     margin: 0;
     a {
-      color: mix($color-black, $color-blue, 40%);
+      color: mix($color-black, $color-primary, 40%);
       &:hover {
-        color: mix($color-black, $color-blue, 20%);
+        color: mix($color-black, $color-primary, 20%);
+      }
+      @include dark {
+        color: mix($color-white, $color-primary-dark, 20%);
+        &:hover {
+          color: mix($color-white, $color-primary-dark, 40%);
+        }
       }
     }
   }
 
   &-aside {
     padding: 0 1em;
-    border-left: 2px solid $color-blue;
+    border-left: 2px solid $color-primary;
+    @include dark {
+      border-left-color: $color-primary-dark;
+    }
     font-size: 0.9em;
 
     @media (min-width: 1300px) {
@@ -78,9 +96,12 @@
     }
 
     a {
-      color: $color-grey;
+      color: $color-text-light;
       &.active {
         color: $color-link;
+        @include dark {
+          color: $color-link-dark;
+        }
       }
     }
   }
@@ -111,7 +132,10 @@
       transform: translate(-50%, -50%);
 
       padding: 0.5em;
-      background: #fff;
+      background: $color-bg;
+      @include dark {
+        background: $color-bg-dark;
+      }
       content: attr(data-text);
     }
   }
