@@ -124,7 +124,10 @@
     position: relative;
     margin: 3rem 0;
     color: #ddd;
-    border-bottom: 0.2em dashed #eee;
+    border-bottom: 0.2em dashed $color-border;
+    @include dark {
+      border-bottom-color: $color-border-dark;
+    }
     &::after {
       position: absolute;
       left: 50%;

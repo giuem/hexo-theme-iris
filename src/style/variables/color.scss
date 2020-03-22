@@ -13,10 +13,10 @@ $color-border: #ddd;
 
 $color-primary-dark: $color-orange;
 $color-bg-dark: #121212;
-$color-text-dark: #eee;
-$color-text-light-dark: #bbb;
+$color-text-dark: rgba(255, 255, 255, 0.87);
+$color-text-light-dark: rgba(255, 255, 255, 0.6);
 $color-link-dark: $color-primary-dark;
 $color-link-hover-dark: lighten($color-link-dark, 10%);
-$color-border-dark: #888;
+$color-border-dark: rgba(255, 255, 255, 0.33);
 
 
