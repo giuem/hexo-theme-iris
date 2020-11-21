@@ -24,7 +24,6 @@ if (is_archive()) {
   }).length
 }
 
-
 var posts = page.posts.data.reduce((r, post, i, a, key = post.date.year()) => ((r[key] || (r[key] = [])).push(post), r), {});
 %>
 
@@ -34,10 +33,7 @@ var posts = page.posts.data.reduce((r, post, i, a, key = post.date.year()) => ((
   </header>
   <section class="archive-content">
     <p class="counter"><%= _p(type + ".counter", couter) %></p>
-    <%  %>
-
-    <>
-    <% Object.entries(posts).reverse().forEach(function(posts, year) { %>
+    <% Object.entries(posts).reverse().forEach(function([year, posts]) { %>
       <h2 class="year"><%= year %></h2>
       <ul class="archive-group">
         <% posts.forEach(function(post) { %>
