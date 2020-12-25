@@ -71,7 +71,7 @@
     @media (min-width: 1300px) {
       max-width: calc(50vw - #{$container-width/2});
       float: right;
-      margin-right: -25%;
+      transform: translateX(calc(100% + 1rem));
       position: sticky;
       top: 1em;
 
