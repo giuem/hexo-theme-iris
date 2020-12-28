@@ -72,6 +72,7 @@
       max-width: calc(50vw - #{$container-width/2});
       float: right;
       transform: translateX(calc(100% + 1rem));
+      margin-left: -100%;
       position: sticky;
       top: 1em;
 
